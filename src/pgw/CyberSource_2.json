@@ -70,6 +70,10 @@
       "field_value_expression": "$!MerchantId"
     },
     {
+      "field_name": "Header-Host",
+      "field_value_expression": "#{if}($isTest)apitest.cybersource.com#{else}api.cybersource.com#{end}"
+    },
+    {
       "field_name": "Block-Error-Handler",
       "field_value_expression": "
       #[[
@@ -275,6 +279,10 @@
             {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
+            },
+            {
+              "field_name": "Host",
+              "field_value_expression": "${Header-Host}"
             },
             {
               "field_name": "REQUEST_BODY",
@@ -495,6 +503,10 @@
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
+              "field_name": "Host",
+              "field_value_expression": "${Header-Host}"
+            },
+            {
               "field_name": "REQUEST_BODY",
               "field_value_expression": "${requestBody}"
             }
@@ -608,6 +620,10 @@
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
+              "field_name": "Host",
+              "field_value_expression": "${Header-Host}"
+            },
+            {
               "field_name": "REQUEST_BODY",
               "field_value_expression": "${requestBody}"
             }
@@ -706,6 +722,10 @@
             {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
+            },
+            {
+              "field_name": "Host",
+              "field_value_expression": "${Header-Host}"
             },
             {
               "field_name": "REQUEST_BODY",
