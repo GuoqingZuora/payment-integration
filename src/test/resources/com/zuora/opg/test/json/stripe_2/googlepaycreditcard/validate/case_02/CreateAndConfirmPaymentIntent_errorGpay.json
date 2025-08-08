@@ -1,0 +1,10 @@
+{
+  "error": {
+    "code": "invalid_expiry_year",
+    "doc_url": "https://stripe.com/docs/error-codes/invalid-expiry-year",
+    "message": "Your card's expiration year is invalid.",
+    "param": "exp_year",
+    "request_log_url": "https://dashboard.stripe.com/acct_1KH6cLI3dKT3t0iK/test/logs/req_gj2wLDCQjOtbpk?t=1686063230",
+    "type": "card_error"
+  }
+}

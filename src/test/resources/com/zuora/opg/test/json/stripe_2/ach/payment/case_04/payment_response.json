@@ -1,0 +1,142 @@
+{
+  "id": "pi_3Ovbiv4ZWiZesCzm0rzn5pPD",
+  "object": "payment_intent",
+  "amount": 1000,
+  "amount_capturable": 0,
+  "amount_details": {
+    "tip": {}
+  },
+  "amount_received": 0,
+  "application": null,
+  "application_fee_amount": null,
+  "automatic_payment_methods": null,
+  "canceled_at": null,
+  "cancellation_reason": null,
+  "capture_method": "automatic",
+  "charges": {
+    "object": "list",
+    "data": [
+      {
+        "id": "py_3Ovbiv4ZWiZesCzm070Bc0Oq",
+        "object": "charge",
+        "amount": 1000,
+        "amount_captured": 1000,
+        "amount_refunded": 0,
+        "application": null,
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": null,
+        "billing_details": {
+          "address": {
+            "city": "city",
+            "country": "US",
+            "line1": "Test line1",
+            "line2": null,
+            "postal_code": "12345",
+            "state": "CA"
+          },
+          "email": "success@example.com",
+          "name": "Created from pm_usBankAccount_success",
+          "phone": null
+        },
+        "calculated_statement_descriptor": null,
+        "captured": true,
+        "created": 1710751153,
+        "currency": "usd",
+        "customer": "cus_Pl7IhB2ujMBtNs",
+        "description": null,
+        "destination": null,
+        "dispute": null,
+        "disputed": false,
+        "failure_balance_transaction": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {},
+        "invoice": null,
+        "livemode": false,
+        "metadata": {
+          "zpayment_number": "P-00000029"
+        },
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": null,
+        "paid": false,
+        "payment_intent": "pi_3Ovbiv4ZWiZesCzm0rzn5pPD",
+        "payment_method": "pm_1Ovbiv4ZWiZesCzmKYzBYktN",
+        "payment_method_details": {
+          "type": "us_bank_account",
+          "us_bank_account": {
+            "account_holder_type": "individual",
+            "account_type": "checking",
+            "bank_name": "STRIPE TEST BANK",
+            "fingerprint": "gFKWJhB6hTA446Qx",
+            "last4": "6789",
+            "routing_number": "110000000"
+          }
+        },
+        "radar_options": {},
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": null,
+        "refunded": false,
+        "refunds": {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/charges/py_3Ovbiv4ZWiZesCzm070Bc0Oq/refunds"
+        },
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "statement_descriptor_suffix": null,
+        "status": "pending",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    ],
+    "has_more": false,
+    "total_count": 1,
+    "url": "/v1/charges?payment_intent=pi_3Ovbiv4ZWiZesCzm0rzn5pPD"
+  },
+  "client_secret": "pi_3Ovbiv4ZWiZesCzm0rzn5pPD_secret_DLqcDU71TlFzxrkxrjS7bKfoB",
+  "confirmation_method": "automatic",
+  "created": 1710751153,
+  "currency": "usd",
+  "customer": "cus_Pl7IhB2ujMBtNs",
+  "description": null,
+  "invoice": null,
+  "last_payment_error": null,
+  "latest_charge": "py_3Ovbiv4ZWiZesCzm070Bc0Oq",
+  "level3": null,
+  "livemode": false,
+  "metadata": {
+    "zpayment_number": "P-00000029"
+  },
+  "next_action": null,
+  "on_behalf_of": null,
+  "payment_method": "pm_1Ovbiv4ZWiZesCzmKYzBYktN",
+  "payment_method_configuration_details": null,
+  "payment_method_options": {
+    "us_bank_account": {
+      "mandate_options": {},
+      "verification_method": "automatic"
+    }
+  },
+  "payment_method_types": [
+    "us_bank_account"
+  ],
+  "processing": null,
+  "receipt_email": null,
+  "review": null,
+  "setup_future_usage": null,
+  "shipping": null,
+  "source": null,
+  "statement_descriptor": null,
+  "statement_descriptor_suffix": null,
+  "status": "processing",
+  "transfer_data": null,
+  "transfer_group": null
+}

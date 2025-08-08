@@ -1,0 +1,173 @@
+{
+  "id": "pi_3NN9nLGT0RtLbTJ23DwZjfUy",
+  "object": "payment_intent",
+  "amount": 100,
+  "amount_capturable": 100,
+  "amount_details": {
+    "tip": {}
+  },
+  "amount_received": 0,
+  "application": null,
+  "application_fee_amount": null,
+  "automatic_payment_methods": null,
+  "canceled_at": null,
+  "cancellation_reason": null,
+  "capture_method": "manual",
+  "charges": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ch_3NN9nLGT0RtLbTJ233tfzREf",
+        "object": "charge",
+        "amount": 100,
+        "amount_captured": 0,
+        "amount_refunded": 0,
+        "application": null,
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": null,
+        "billing_details": {
+          "address": {
+            "city": null,
+            "country": null,
+            "line1": null,
+            "line2": null,
+            "postal_code": null,
+            "state": null
+          },
+          "email": null,
+          "name": null,
+          "phone": null
+        },
+        "calculated_statement_descriptor": "ZUORA INC",
+        "captured": false,
+        "created": 1687764307,
+        "currency": "usd",
+        "customer": null,
+        "description": null,
+        "destination": null,
+        "dispute": null,
+        "disputed": false,
+        "failure_balance_transaction": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {},
+        "invoice": null,
+        "livemode": false,
+        "metadata": {},
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": {
+          "network_advice_code": null,
+          "network_decline_code": null,
+          "network_status": "approved_by_network",
+          "reason": null,
+          "risk_level": "normal",
+          "risk_score": 35,
+          "seller_message": "Payment complete.",
+          "type": "authorized"
+        },
+        "paid": true,
+        "payment_intent": "pi_3NN9nLGT0RtLbTJ23DwZjfUy",
+        "payment_method": "pm_1NN9nLGT0RtLbTJ2reul1GYQ",
+        "payment_method_details": {
+          "card": {
+            "brand": "amex",
+            "checks": {
+              "address_line1_check": null,
+              "address_postal_code_check": null,
+              "cvc_check": null
+            },
+            "country": "US",
+            "ds_transaction_id": null,
+            "exp_month": 8,
+            "exp_year": 2049,
+            "fingerprint": null,
+            "funding": "credit",
+            "installments": null,
+            "last4": "0005",
+            "mandate": null,
+            "moto": null,
+            "network": "amex",
+            "network_token": {
+              "exp_month": 8,
+              "exp_year": 2049,
+              "fingerprint": "AD2Tf1MFlwkmgwQB",
+              "last4": "0005",
+              "tokenization_method": "google_pay_dpan",
+              "used": false
+            },
+            "network_transaction_id": "656850841024977",
+            "three_d_secure": null,
+            "wallet": {
+              "dynamic_last4": "0005",
+              "google_pay": {},
+              "type": "google_pay"
+            }
+          },
+          "type": "card"
+        },
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xSUJRYjRHVDBSdExiVEoyKNT65KQGMgbD51AoBwQ6LBZMDK_zd97bfCSA_GHCbF4lt1mQ49K7gKsEp9s0hu_vuByY7mocS-SPrn7u",
+        "refunded": false,
+        "refunds": {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/charges/ch_3NN9nLGT0RtLbTJ233tfzREf/refunds"
+        },
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "statement_descriptor_suffix": null,
+        "status": "succeeded",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    ],
+    "has_more": false,
+    "total_count": 1,
+    "url": "/v1/charges?payment_intent=pi_3NN9nLGT0RtLbTJ23DwZjfUy"
+  },
+  "client_secret": "pi_3NN9nLGT0RtLbTJ23DwZjfUy_secret_kHCysTyXE6Qn777TwMhVw4bTM",
+  "confirmation_method": "automatic",
+  "created": 1687764307,
+  "currency": "usd",
+  "customer": null,
+  "description": null,
+  "invoice": null,
+  "last_payment_error": null,
+  "latest_charge": "ch_3NN9nLGT0RtLbTJ233tfzREf",
+  "level3": null,
+  "livemode": false,
+  "metadata": {},
+  "next_action": null,
+  "on_behalf_of": null,
+  "payment_method": "pm_1NN9nLGT0RtLbTJ2reul1GYQ",
+  "payment_method_options": {
+    "card": {
+      "installments": null,
+      "mandate_options": null,
+      "network": null,
+      "request_three_d_secure": "automatic"
+    }
+  },
+  "payment_method_types": [
+    "card"
+  ],
+  "processing": null,
+  "receipt_email": null,
+  "review": null,
+  "setup_future_usage": null,
+  "shipping": null,
+  "source": null,
+  "statement_descriptor": null,
+  "statement_descriptor_suffix": null,
+  "status": "requires_capture",
+  "transfer_data": null,
+  "transfer_group": null
+}

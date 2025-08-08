@@ -1,0 +1,318 @@
+{
+  "id": "pi_3NFaYhI3dKT3t0iK1QgWSbGY",
+  "object": "payment_intent",
+  "amount": 500,
+  "amount_capturable": 0,
+  "amount_details": {
+    "tip": {}
+  },
+  "amount_received": 500,
+  "application": "ca_InA7dYYPZTUPuEBolrjvtCzbkivYpfeM",
+  "application_fee_amount": null,
+  "automatic_payment_methods": null,
+  "canceled_at": null,
+  "cancellation_reason": null,
+  "capture_method": "automatic",
+  "charges": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ch_3NFaYhI3dKT3t0iK1wqHhoKl",
+        "object": "charge",
+        "amount": 500,
+        "amount_captured": 500,
+        "amount_refunded": 0,
+        "application": "ca_InA7dYYPZTUPuEBolrjvtCzbkivYpfeM",
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": "txn_3NFaYhI3dKT3t0iK1AOCnrTc",
+        "billing_details": {
+          "address": {
+            "city": null,
+            "country": null,
+            "line1": null,
+            "line2": null,
+            "postal_code": null,
+            "state": null
+          },
+          "email": null,
+          "name": null,
+          "phone": null
+        },
+        "calculated_statement_descriptor": "ZUORA INC",
+        "captured": true,
+        "created": 1685960564,
+        "currency": "usd",
+        "customer": null,
+        "description": null,
+        "destination": null,
+        "dispute": null,
+        "disputed": false,
+        "failure_balance_transaction": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {},
+        "invoice": null,
+        "level3": {
+          "customer_reference": "A00000004",
+          "line_items": [
+            {
+              "discount_amount": 0,
+              "product_code": "SKU-00000001",
+              "product_description": "Recurring -- Proration",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 800
+            },
+            {
+              "discount_amount": 0,
+              "product_code": "SKU-00000001",
+              "product_description": "One Time",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 5000
+            },
+            {
+              "discount_amount": 0,
+              "product_code": "SKU-00000001",
+              "product_description": "Recurring",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 1000
+            },
+            {
+              "discount_amount": 0,
+              "product_code": "SKU-00000001",
+              "product_description": "Recurring",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 1000
+            },
+            {
+              "discount_amount": 0,
+              "product_code": "SKU-00000001",
+              "product_description": "Recurring",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 1000
+            },
+            {
+              "discount_amount": 0,
+              "product_code": "SKU-00000001",
+              "product_description": "Recurring",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 1000
+            },
+            {
+              "discount_amount": 0,
+              "product_code": "SKU-00000001",
+              "product_description": "Recurring -- Proration",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 200
+            },
+            {
+              "discount_amount": 9500,
+              "product_code": "Partial",
+              "product_description": "Partial payment difference",
+              "quantity": 1,
+              "tax_amount": 0,
+              "unit_cost": 0
+            }
+          ],
+          "merchant_reference": "P-00000013",
+          "shipping_amount": 0
+        },
+        "livemode": false,
+        "metadata": {
+          "zpayment_number": "P-00000013"
+        },
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": {
+          "network_advice_code": null,
+          "network_decline_code": null,
+          "network_status": "approved_by_network",
+          "reason": null,
+          "risk_level": "normal",
+          "risk_score": 17,
+          "seller_message": "Payment complete.",
+          "type": "authorized"
+        },
+        "paid": true,
+        "payment_intent": "pi_3NFaYhI3dKT3t0iK1QgWSbGY",
+        "payment_method": "pm_1NFaYhI3dKT3t0iKVpOPhA2Y",
+        "payment_method_details": {
+          "card": {
+            "brand": "visa",
+            "checks": {
+              "address_line1_check": null,
+              "address_postal_code_check": null,
+              "cvc_check": null
+            },
+            "country": "US",
+            "ds_transaction_id": null,
+            "exp_month": 12,
+            "exp_year": 2023,
+            "fingerprint": null,
+            "funding": "debit",
+            "installments": null,
+            "last4": "8170",
+            "mandate": null,
+            "moto": null,
+            "network": "visa",
+            "network_token": {
+              "exp_month": 12,
+              "exp_year": 2023,
+              "fingerprint": "FuJQlwP7iXTJWBeF",
+              "last4": "8170",
+              "tokenization_method": "google_pay_dpan",
+              "used": false
+            },
+            "network_transaction_id": "901151114810210",
+            "three_d_secure": null,
+            "wallet": {
+              "dynamic_last4": "0505",
+              "google_pay": {},
+              "type": "google_pay"
+            }
+          },
+          "type": "card"
+        },
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xS0g2Y0xJM2RLVDN0MGlLKPTu9qMGMgaMYmwVYM06LBYb8TsECXwbWdFeGWV3bsjBAR153cxkQGHO7bpRBvJM3i4sa9Pit9sF9TZb",
+        "refunded": false,
+        "refunds": {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/charges/ch_3NFaYhI3dKT3t0iK1wqHhoKl/refunds"
+        },
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "statement_descriptor_suffix": null,
+        "status": "succeeded",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    ],
+    "has_more": false,
+    "total_count": 1,
+    "url": "/v1/charges?payment_intent=pi_3NFaYhI3dKT3t0iK1QgWSbGY"
+  },
+  "client_secret": "pi_3NFaYhI3dKT3t0iK1QgWSbGY_secret_k9LwFvaH2LlmKBg4EE9QaRtFL",
+  "confirmation_method": "automatic",
+  "created": 1685960563,
+  "currency": "usd",
+  "customer": null,
+  "description": null,
+  "invoice": null,
+  "last_payment_error": null,
+  "latest_charge": "ch_3NFaYhI3dKT3t0iK1wqHhoKl",
+  "level3": {
+    "customer_reference": "A00000004",
+    "line_items": [
+      {
+        "discount_amount": 0,
+        "product_code": "SKU-00000001",
+        "product_description": "Recurring -- Proration",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 800
+      },
+      {
+        "discount_amount": 0,
+        "product_code": "SKU-00000001",
+        "product_description": "One Time",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 5000
+      },
+      {
+        "discount_amount": 0,
+        "product_code": "SKU-00000001",
+        "product_description": "Recurring",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 1000
+      },
+      {
+        "discount_amount": 0,
+        "product_code": "SKU-00000001",
+        "product_description": "Recurring",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 1000
+      },
+      {
+        "discount_amount": 0,
+        "product_code": "SKU-00000001",
+        "product_description": "Recurring",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 1000
+      },
+      {
+        "discount_amount": 0,
+        "product_code": "SKU-00000001",
+        "product_description": "Recurring",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 1000
+      },
+      {
+        "discount_amount": 0,
+        "product_code": "SKU-00000001",
+        "product_description": "Recurring -- Proration",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 200
+      },
+      {
+        "discount_amount": 9500,
+        "product_code": "Partial",
+        "product_description": "Partial payment difference",
+        "quantity": 1,
+        "tax_amount": 0,
+        "unit_cost": 0
+      }
+    ],
+    "merchant_reference": "P-00000013",
+    "shipping_amount": 0
+  },
+  "livemode": false,
+  "metadata": {
+    "zpayment_number": "P-00000013"
+  },
+  "next_action": null,
+  "on_behalf_of": null,
+  "payment_method": "pm_1NFaYhI3dKT3t0iKVpOPhA2Y",
+  "payment_method_options": {
+    "card": {
+      "installments": null,
+      "mandate_options": null,
+      "network": null,
+      "request_three_d_secure": "automatic"
+    }
+  },
+  "payment_method_types": [
+    "card"
+  ],
+  "processing": null,
+  "receipt_email": null,
+  "review": null,
+  "setup_future_usage": null,
+  "shipping": null,
+  "source": null,
+  "statement_descriptor": null,
+  "statement_descriptor_suffix": null,
+  "status": "succeeded",
+  "transfer_data": null,
+  "transfer_group": null
+}

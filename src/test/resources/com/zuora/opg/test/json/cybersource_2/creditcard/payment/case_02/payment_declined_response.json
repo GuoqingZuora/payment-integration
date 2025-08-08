@@ -1,0 +1,19 @@
+{
+  "submitTimeUtc": "2024-08-07T07:25:00Z",
+  "status": "DECLINED",
+  "reason": "AVS_FAILED",
+  "message": "Declined - Address Verification Service (AVS) failed",
+  "details": [
+    {
+      "field": "paymentInformation.card.number",
+      "reason": "AVS_FAILED"
+    }
+  ],
+  "processorInformation": {
+    "responseCode": "201",
+    "avs": {
+      "code": "N",
+      "codeRaw": "N"
+    }
+  }
+}

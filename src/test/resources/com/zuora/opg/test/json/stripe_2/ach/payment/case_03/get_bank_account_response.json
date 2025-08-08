@@ -1,0 +1,18 @@
+{
+  "id":"ba_1MAcjnHo3zohLKRe4Quaahlk",
+  "object":"bank_account",
+  "account_holder_name":"ContainIQ, Inc.",
+  "account_holder_type":"individual",
+  "account_type":null,
+  "bank_name":"UMB, NA",
+  "country":"US",
+  "currency":"usd",
+  "customer":"cus_MuRd89riAKPu3u",
+  "fingerprint":"raGXyFvK0lnpMIch",
+  "last4":"3167",
+  "metadata":{
+
+  },
+  "routing_number":"044000804",
+  "status":"verified"
+}

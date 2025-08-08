@@ -1,0 +1,29 @@
+{
+  "id": "pm_1LfimdGT0RtLbTJ2I4d89RC7",
+  "object": "payment_method",
+  "acss_debit": {
+    "bank_name": "STRIPE TEST BANK",
+    "fingerprint": "6oj2Y8A0PwU6F0Zh",
+    "institution_number": "000",
+    "last4": "6789",
+    "transit_number": "11000"
+  },
+  "billing_details": {
+    "address": {
+      "city": null,
+      "country": null,
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "email": "kshah+skip_waiting+test_email@zuora.com",
+    "name": "bankAccountName",
+    "phone": null
+  },
+  "created": 1662636035,
+  "customer": "cus_MOVoWV0qwqVujF",
+  "livemode": false,
+  "metadata": {},
+  "type": "acss_debit"
+}

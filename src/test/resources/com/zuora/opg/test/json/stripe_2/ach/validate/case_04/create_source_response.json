@@ -1,0 +1,1 @@
+{ "id": "ba_1Nl6grSC2hQ3y1elSgrpU1qr", "object": "bank_account", "account_holder_name": "test", "account_holder_type": "individual", "account_type": null, "bank_name": "STRIPE TEST BANK", "country": "US", "currency": "usd", "customer": "cus_OYD7cD98gTt05A", "fingerprint": "NYh5fH6Wrac5fDMx", "last4": "6789", "metadata": {}, "routing_number": "110000000", "status": "new" }

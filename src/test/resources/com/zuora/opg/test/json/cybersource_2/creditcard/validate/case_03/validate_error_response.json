@@ -1,0 +1,12 @@
+{
+  "submitTimeUtc": "2024-08-07T07:25:00Z",
+  "status": "SERVER_ERROR",
+  "reason": "SYSTEM_ERROR",
+  "message": "An error occurred during processing. Please try again.",
+  "details": [
+    {
+      "field": "general",
+      "reason": "SYSTEM_ERROR"
+    }
+  ]
+}

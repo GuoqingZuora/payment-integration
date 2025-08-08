@@ -1,0 +1,52 @@
+{
+  "id": "6865460696176033204955",
+  "submitTimeUtc": "2024-08-07T07:25:00Z",
+  "status": "AUTHORIZED",
+  "reconciliationId": "test_payment_124",
+  "clientReferenceInformation": {
+    "code": "test_reference_code_124",
+    "reconciliationId": "test_payment_124"
+  },
+  "processorInformation": {
+    "approvalCode": "888889",
+    "networkTransactionId": "123456789012346",
+    "transactionId": "test_processor_txn_124",
+    "responseCode": "100",
+    "avs": {
+      "code": "Y",
+      "codeRaw": "Y"
+    },
+    "cardVerification": {
+      "resultCode": "M"
+    }
+  },
+  "paymentInformation": {
+    "card": {
+      "type": "001"
+    },
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "accountFeatures": {
+      "balanceInquiry": "N",
+      "accountFundingSource": "C"
+    }
+  },
+  "orderInformation": {
+    "amountDetails": {
+      "totalAmount": "1.00",
+      "authorizedAmount": "1.00",
+      "currency": "USD"
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/pts/v2/payments/6865460696176033204955",
+      "method": "GET"
+    },
+    "void": {
+      "href": "/pts/v2/payments/6865460696176033204955/voids",
+      "method": "POST"
+    }
+  }
+}

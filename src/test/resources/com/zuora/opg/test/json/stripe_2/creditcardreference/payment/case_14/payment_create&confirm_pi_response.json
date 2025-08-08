@@ -1,0 +1,8 @@
+{
+  "error": {
+    "message": "Invalid string: KT(]s!ig8}...e~{rp}p]-a; must be at most 1000 characters",
+    "param": "description",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_6gxuw6mgu12ypm?t=1717780417",
+    "type": "invalid_request_error"
+  }
+}

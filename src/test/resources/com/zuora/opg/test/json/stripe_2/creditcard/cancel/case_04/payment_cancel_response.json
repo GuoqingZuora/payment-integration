@@ -1,0 +1,1 @@
+{ "error": { "message": "Something went wrong on Stripe's end.", "param": "source", "request_log_url": "https://dashboard.stripe.com/acct_1NkL5bSC2hQ3y1el/test/logs/req_s2smvlsF13m4mD?t=1693487107", "type": "api_error" } }

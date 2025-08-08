@@ -1,0 +1,10 @@
+{
+  "error": {
+    "code": "parameter_invalid_empty",
+    "doc_url": "https://stripe.com/docs/error-codes/parameter-invalid-empty",
+    "message": "You passed an empty string for 'payment_method'. We assume empty values are an attempt to unset a parameter; however 'payment_method' cannot be unset. You should remove 'payment_method' from your request or supply a non-empty value.",
+    "param": "payment_method",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_kjGpdAVsncC4td?t=1695994306",
+    "type": "invalid_request_error"
+  }
+}

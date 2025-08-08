@@ -1,0 +1,8 @@
+{
+  "error": {
+    "message": "Invalid level3: pricing must be consistent. Sum(unit_cost * quantity + tax_amount - discount_amount) + shipping_amount != total charged. In this case, 600 != 400.",
+    "param": "level3",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_LZTQTwvXHl5G99?t=1684468700",
+    "type": "invalid_request_error"
+  }
+}

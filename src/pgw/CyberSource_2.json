@@ -3,7 +3,7 @@
   "gateway_version": "2",
   "display_name": "CyberSource v2",
   "gateway_revision": 1,
-  "status": "Draft",
+  "status": "Published",
   "request_language": "Raw",
   "card_types": [
     "Visa",
@@ -71,11 +71,11 @@
     },
     {
       "field_name": "Header-v-c-date",
-      "field_value_expression": "$ZUtility.formatDate($ZUtility.getCurrentDate(), 'EEE, dd MMM yyyy HH:mm:ss z', 'GMT')"
+      "field_value_expression": "$!ZUtility.getTime(\"0\", \"EEE, dd MMM yyyy HH:mm:ss z\", \"GMT\")"
     },
     {
       "field_name": "Header-Host",
-      "field_value_expression": "#{if}($isTest)apitest.cybersource.com#{else}api.cybersource.com#{end}"
+      "field_value_expression": "#{if}($IsTest)apitest.cybersource.com#{else}api.cybersource.com#{end}"
     },
     {
       "field_name": "Header-Signature",
@@ -158,7 +158,7 @@
       #{set}( $macroReturn = {
       'orderInformation': {
         'amountDetails': {
-          'totalAmount': $!Amount,
+          'totalAmount': $!DefaultAuthAmount,
           'currency': $!Currency
         }
       }
@@ -276,12 +276,12 @@
               #evaluate(${Block-Construct-ProcessingInformation})
               $paymentRequestMap.putAll($macroReturn)
 
-              #{set}( $requestBody = $ZUtility.toJsonString($paymentRequestMap) )
+              #{set}( $requestBody = $ZUtility.mapToJSON($paymentRequestMap) )
               "
             },
             {
               "field_name": "URL",
-              "field_value_expression": "#{if}($isTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments"
+              "field_value_expression": "#{if}($IsTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments"
             },
             {
               "field_name": "METHOD",
@@ -417,10 +417,10 @@
             {
               "temporary": true,
               "field_name": "isZeroAmount",
-              "field_value_expression": "#{if}($StringUtils.equals($Amount, '0') || $StringUtils.equals($Amount, '0.00'))true#{else}false#{end}"
+              "field_value_expression": "#{if}($StringUtils.equals($!DefaultAuthAmount, '0') || $StringUtils.equals($!DefaultAuthAmount, '0.00'))true#{else}false#{end}"
             }
           ],
-          "request_to_log": "Check if amount is zero for validation: Amount = $!Amount",
+          "request_to_log": "Check if amount is zero for validation: Amount = $!DefaultAuthAmount",
           "transaction_response_fields": [],
           "response_fsm_event_expression": "#{if}($StringUtils.equals($isZeroAmount, 'true'))Success#{else}Error#{end}"
         },
@@ -447,7 +447,7 @@
               #{set}( $macroReturn = {
               'orderInformation': {
                 'amountDetails': {
-                  'totalAmount': '0.00',
+                  'totalAmount': $!DefaultAuthAmount,
                   'currency': $!Currency
                 }
               }
@@ -502,12 +502,12 @@
               #{end}
               #{set}( $validationRequestMap['processingInformation']['capture'] = false )
 
-              #{set}( $requestBody = $ZUtility.toJsonString($validationRequestMap) )
+              #{set}( $requestBody = $ZUtility.mapToJSON($validationRequestMap) )
               "
             },
             {
               "field_name": "URL",
-              "field_value_expression": "#{if}($isTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments"
+              "field_value_expression": "#{if}($IsTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments"
             },
             {
               "field_name": "METHOD",
@@ -623,12 +623,12 @@
               #{end}
               #{set}( $paymentRequestMap['processingInformation']['capture'] = false )
 
-              #{set}( $requestBody = $ZUtility.toJsonString($paymentRequestMap) )
+              #{set}( $requestBody = $ZUtility.mapToJSON($paymentRequestMap) )
               "
             },
             {
               "field_name": "URL",
-              "field_value_expression": "#{if}($isTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments"
+              "field_value_expression": "#{if}($IsTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments"
             },
             {
               "field_name": "METHOD",
@@ -731,12 +731,12 @@
               #{set}( $voidRequestMap['clientReferenceInformation']['reconciliationId'] = $!PaymentNumber )
               #{end}
 
-              #{set}( $requestBody = $ZUtility.toJsonString($voidRequestMap) )
+              #{set}( $requestBody = $ZUtility.mapToJSON($voidRequestMap) )
               "
             },
             {
               "field_name": "URL",
-              "field_value_expression": "#{if}($isTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments/${authTransactionId}/voids"
+              "field_value_expression": "#{if}($IsTest)https://apitest.cybersource.com#{else}https://api.cybersource.com#{end}/pts/v2/payments/${authTransactionId}/voids"
             },
             {
               "field_name": "METHOD",
@@ -903,7 +903,7 @@
       "label": "PaymentGateway.CyberSource.organizationId.label",
       "hidden": false,
       "is_required": true,
-      "read_only": true,
+      "read_only": false,
       "need_encryption": false,
       "default_value": null,
       "tip_description": "Your CyberSource organization ID (merchant ID)",
@@ -923,7 +923,7 @@
       "label": "PaymentGateway.CyberSource.SharedKey.label",
       "hidden": false,
       "is_required": true,
-      "read_only": true,
+      "read_only": false,
       "need_encryption": true,
       "default_value": null,
       "tip_description": "CyberSource shared key for HMAC signature generation",
@@ -943,7 +943,7 @@
       "label": "PaymentGateway.CyberSource.sharedsecret.label",
       "hidden": false,
       "is_required": true,
-      "read_only": true,
+      "read_only": false,
       "need_encryption": true,
       "default_value": null,
       "tip_description": "CyberSource shared secret key for HMAC signature generation",

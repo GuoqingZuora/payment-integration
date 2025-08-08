@@ -1,0 +1,165 @@
+{
+  "id": "pi_3M2ZHwSDIx8h6iU71LVetETQ",
+  "object": "payment_intent",
+  "last_payment_error": null,
+  "livemode": false,
+  "next_action": null,
+  "status": "succeeded",
+  "amount": 10000,
+  "amount_capturable": 0,
+  "amount_details": {
+    "tip": {
+    }
+  },
+  "amount_received": 10000,
+  "application": "ca_InA7dYYPZTUPuEBolrjvtCzbkivYpfeM",
+  "application_fee_amount": null,
+  "automatic_payment_methods": null,
+  "canceled_at": null,
+  "cancellation_reason": null,
+  "capture_method": "manual",
+  "charges": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ch_3M2ZHwSDIx8h6iU71pkg5djw",
+        "object": "charge",
+        "amount": 10000,
+        "amount_captured": 10000,
+        "amount_refunded": 0,
+        "application": "ca_InA7dYYPZTUPuEBolrjvtCzbkivYpfeM",
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": "txn_3M2ZHwSDIx8h6iU712jfj24A",
+        "billing_details": {
+          "address": {
+            "city": null,
+            "country": null,
+            "line1": null,
+            "line2": null,
+            "postal_code": null,
+            "state": null
+          },
+          "email": null,
+          "name": "test",
+          "phone": null
+        },
+        "calculated_statement_descriptor": "HARRY DONG",
+        "captured": true,
+        "created": 1668081080,
+        "currency": "inr",
+        "customer": null,
+        "description": null,
+        "destination": null,
+        "dispute": null,
+        "disputed": false,
+        "failure_balance_transaction": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {
+        },
+        "invoice": null,
+        "livemode": false,
+        "metadata": {
+        },
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": {
+          "network_advice_code": null,
+          "network_decline_code": null,
+          "network_status": "approved_by_network",
+          "reason": null,
+          "risk_level": "normal",
+          "risk_score": 45,
+          "seller_message": "Payment complete.",
+          "type": "authorized"
+        },
+        "paid": true,
+        "payment_intent": "pi_3M2ZHwSDIx8h6iU71LVetETQ",
+        "payment_method": "pm_1M2ZHwSDIx8h6iU7OaWGUrqT",
+        "payment_method_details": {
+          "card": {
+            "brand": "visa",
+            "checks": {
+              "address_line1_check": null,
+              "address_postal_code_check": null,
+              "cvc_check": null
+            },
+            "country": "US",
+            "ds_transaction_id": null,
+            "exp_month": 10,
+            "exp_year": 2028,
+            "fingerprint": "0f5sCVhf9SUKj7Cg",
+            "funding": "credit",
+            "installments": null,
+            "last4": "4242",
+            "mandate": null,
+            "moto": null,
+            "network": "visa",
+            "network_transaction_id": "101496599758753",
+            "three_d_secure": null,
+            "wallet": null
+          },
+          "type": "card"
+        },
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xSmVaeFBTREl4OGg2aVU3KPXMs5sGMgZYajqINc46LBaiP5t7WuFVih9aWMcG38zii43OTCFSu3Ri0kZ_sqRR-qxvV8U5xYIMollz",
+        "refunded": false,
+        "refunds": {
+          "object": "list",
+          "data": [
+          ],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/charges/ch_3M2ZHwSDIx8h6iU71pkg5djw/refunds"
+        },
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "statement_descriptor_suffix": null,
+        "status": "succeeded",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    ],
+    "has_more": false,
+    "total_count": 1,
+    "url": "/v1/charges?payment_intent=pi_3M2ZHwSDIx8h6iU71LVetETQ"
+  },
+  "client_secret": "pi_3M2ZHwSDIx8h6iU71LVetETQ_secret_xXOwNSJFwpQxfXQ9P0F2N40Nr",
+  "confirmation_method": "automatic",
+  "created": 1668081080,
+  "currency": "inr",
+  "customer": null,
+  "description": null,
+  "invoice": null,
+  "level3": null,
+  "metadata": {
+  },
+  "on_behalf_of": null,
+  "payment_method": "pm_1M2ZHwSDIx8h6iU7OaWGUrqT",
+  "payment_method_options": {
+    "card": {
+      "installments": null,
+      "mandate_options": null,
+      "network": null,
+      "request_three_d_secure": "automatic"
+    }
+  },
+  "payment_method_types": [
+    "card"
+  ],
+  "processing": null,
+  "receipt_email": null,
+  "review": null,
+  "setup_future_usage": null,
+  "shipping": null,
+  "source": null,
+  "statement_descriptor": null,
+  "statement_descriptor_suffix": null,
+  "transfer_data": null,
+  "transfer_group": null
+}

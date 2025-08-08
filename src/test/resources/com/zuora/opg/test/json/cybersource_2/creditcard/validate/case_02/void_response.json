@@ -1,0 +1,24 @@
+{
+  "id": "6865460696176033204955",
+  "submitTimeUtc": "2024-08-07T07:25:00Z",
+  "status": "VOIDED",
+  "reconciliationId": "test_payment_124",
+  "clientReferenceInformation": {
+    "code": "test_reference_code_124_void",
+    "reconciliationId": "test_payment_124"
+  },
+  "voidAmountDetails": {
+    "voidAmount": "1.00",
+    "currency": "USD"
+  },
+  "processorInformation": {
+    "responseCode": "100",
+    "transactionId": "test_processor_void_txn_124"
+  },
+  "_links": {
+    "self": {
+      "href": "/pts/v2/payments/6865460696176033204955/voids/6865460696176033204955",
+      "method": "GET"
+    }
+  }
+}

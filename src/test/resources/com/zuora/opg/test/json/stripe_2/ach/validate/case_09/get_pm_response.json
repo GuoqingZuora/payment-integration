@@ -1,0 +1,38 @@
+{
+  "id": "pm_1Ovcpl4ZWiZesCzmXazlWoSz",
+  "object": "payment_method",
+  "billing_details": {
+    "address": {
+      "city": "test",
+      "country": "US",
+      "line1": "test",
+      "line2": "test",
+      "postal_code": "123456",
+      "state": "test"
+    },
+    "email": "test@gmail.com",
+    "name": "test",
+    "phone": null
+  },
+  "created": 1710755421,
+  "customer": null,
+  "livemode": false,
+  "metadata": {},
+  "type": "us_bank_account",
+  "us_bank_account": {
+    "account_holder_type": "individual",
+    "account_type": "checking",
+    "bank_name": "STRIPE TEST BANK",
+    "financial_connections_account": null,
+    "fingerprint": "gFKWJhB6hTA446Qx",
+    "last4": "6789",
+    "networks": {
+      "preferred": "ach",
+      "supported": [
+        "ach"
+      ]
+    },
+    "routing_number": "110000000",
+    "status_details": {}
+  }
+}

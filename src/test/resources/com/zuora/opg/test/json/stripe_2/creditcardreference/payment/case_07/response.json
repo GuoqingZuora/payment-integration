@@ -1,0 +1,184 @@
+{
+   "id": "pi_3OUL6UDWEdEWOKCa0YSfgQkS",
+   "object": "payment_intent",
+   "amount": 900,
+   "amount_capturable": 0,
+   "amount_details": {
+      "tip": {}
+   },
+   "amount_received": 900,
+   "application": "ca_InA7dYYPZTUPuEBolrjvtCzbkivYpfeM",
+   "application_fee_amount": null,
+   "automatic_payment_methods": null,
+   "canceled_at": null,
+   "cancellation_reason": null,
+   "capture_method": "automatic",
+   "charges": {
+      "object": "list",
+      "data": [
+         {
+            "id": "ch_3OUL6UDWEdEWOKCa0LvDkN7a",
+            "object": "charge",
+            "amount": 900,
+            "amount_captured": 900,
+            "amount_refunded": 0,
+            "application": "ca_InA7dYYPZTUPuEBolrjvtCzbkivYpfeM",
+            "application_fee": null,
+            "application_fee_amount": null,
+            "balance_transaction": "txn_3OUL6UDWEdEWOKCa06KxyJZL",
+            "billing_details": {
+               "address": {
+                  "city": null,
+                  "country": null,
+                  "line1": null,
+                  "line2": null,
+                  "postal_code": null,
+                  "state": null
+               },
+               "email": null,
+               "name": null,
+               "phone": null
+            },
+            "calculated_statement_descriptor": "ZUORA INC",
+            "captured": true,
+            "created": 1704252410,
+            "currency": "cad",
+            "customer": "cus_PDNfVuNqbqqWhO",
+            "description": null,
+            "destination": null,
+            "dispute": null,
+            "disputed": false,
+            "failure_balance_transaction": null,
+            "failure_code": null,
+            "failure_message": null,
+            "fraud_details": {},
+            "invoice": null,
+            "livemode": false,
+            "metadata": {
+               "zpayment_number": "P-00020724"
+            },
+            "on_behalf_of": null,
+            "order": null,
+            "outcome": {
+               "network_advice_code": null,
+               "network_decline_code": null,
+               "network_status": "approved_by_network",
+               "reason": null,
+               "risk_level": "normal",
+               "risk_score": 1,
+               "seller_message": "Payment complete.",
+               "type": "authorized"
+            },
+            "paid": true,
+            "payment_intent": "pi_3OUL6UDWEdEWOKCa0YSfgQkS",
+            "payment_method": "card_1OPfVJDWEdEWOKCaLrwG4jBX",
+            "payment_method_details": {
+               "card": {
+                  "amount_authorized": 900,
+                  "brand": "visa",
+                  "checks": {
+                     "address_line1_check": null,
+                     "address_postal_code_check": null,
+                     "cvc_check": null
+                  },
+                  "country": "US",
+                  "ds_transaction_id": null,
+                  "exp_month": 11,
+                  "exp_year": 2025,
+                  "extended_authorization": {
+                     "status": "disabled"
+                  },
+                  "fingerprint": "E30eIuCvlR5kq3vU",
+                  "funding": "credit",
+                  "incremental_authorization": {
+                     "status": "unavailable"
+                  },
+                  "installments": null,
+                  "last4": "1111",
+                  "mandate": null,
+                  "moto": null,
+                  "multicapture": {
+                     "status": "unavailable"
+                  },
+                  "network": "visa",
+                  "network_token": {
+                     "used": false
+                  },
+                  "network_transaction_id": "113488768120655",
+                  "overcapture": {
+                     "maximum_amount_capturable": 900,
+                     "status": "unavailable"
+                  },
+                  "three_d_secure": null,
+                  "wallet": null
+               },
+               "type": "card"
+            },
+            "radar_options": {},
+            "receipt_email": null,
+            "receipt_number": null,
+            "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xT09nQnNEV0VkRVdPS0NhKPqn06wGMgZGl0FSsOE6LBa9OvMXfKNYQ3epQ7tiS2aYtefsSgnG6ATBAkjhkhk0Y6gtEt3CbDOt7cH8",
+            "refunded": false,
+            "refunds": {
+               "object": "list",
+               "data": [],
+               "has_more": false,
+               "total_count": 0,
+               "url": "/v1/charges/ch_3OUL6UDWEdEWOKCa0LvDkN7a/refunds"
+            },
+            "review": null,
+            "shipping": null,
+            "source": null,
+            "source_transfer": null,
+            "statement_descriptor": null,
+            "statement_descriptor_suffix": null,
+            "status": "succeeded",
+            "transfer_data": null,
+            "transfer_group": null
+         }
+      ],
+      "has_more": false,
+      "total_count": 1,
+      "url": "/v1/charges?payment_intent=pi_3OUL6UDWEdEWOKCa0YSfgQkS"
+   },
+   "client_secret": "pi_3OUL6UDWEdEWOKCa0YSfgQkS_secret_XibHMLDHgWoyfyLFDZFQ776lo",
+   "confirmation_method": "automatic",
+   "created": 1704252410,
+   "currency": "cad",
+   "customer": "cus_PDNfVuNqbqqWhO",
+   "description": null,
+   "invoice": null,
+   "last_payment_error": null,
+   "latest_charge": "ch_3OUL6UDWEdEWOKCa0LvDkN7a",
+   "level3": null,
+   "livemode": false,
+   "metadata": {
+      "zpayment_number": "P-00020724"
+   },
+   "next_action": null,
+   "on_behalf_of": null,
+   "payment_method": "card_1OPfVJDWEdEWOKCaLrwG4jBX",
+   "payment_method_configuration_details": null,
+   "payment_method_options": {
+      "card": {
+         "installments": null,
+         "mandate_options": null,
+         "network": null,
+         "request_three_d_secure": "automatic"
+      }
+   },
+   "payment_method_types": [
+      "card"
+   ],
+   "processing": null,
+   "receipt_email": null,
+   "review": null,
+   "setup_future_usage": null,
+   "shipping": null,
+   "source": null,
+   "statement_descriptor": null,
+   "statement_descriptor_suffix": null,
+   "status": "succeeded",
+   "transfer_data": null,
+   "transfer_group": null
+}
