@@ -62,10 +62,6 @@
       "field_value_expression": "application/json"
     },
     {
-      "field_name": "Header-Authorization",
-      "field_value_expression": "${Header-Signature}"
-    },
-    {
       "field_name": "Header-v-c-merchant-id",
       "field_value_expression": "$!organizationId"
     },
@@ -78,7 +74,11 @@
       "field_value_expression": "#{if}($IsTest)apitest.cybersource.com#{else}api.cybersource.com#{end}"
     },
     {
-      "field_name": "Header-Signature",
+      "field_name": "Header-digest",
+      "field_value_expression": "$!ZUtility.getDigest($!requestBody, \"SHA-256\")"
+    },
+    {
+      "field_name": "Header-signature",
       "field_value_expression": "
       #[[
       ## Construct signature string according to CyberSource requirements
@@ -292,16 +292,20 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -518,16 +522,20 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -639,16 +647,20 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -747,16 +759,20 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
