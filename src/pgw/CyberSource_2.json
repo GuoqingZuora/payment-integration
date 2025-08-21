@@ -62,10 +62,6 @@
       "field_value_expression": "application/json"
     },
     {
-      "field_name": "Header-signature",
-      "field_value_expression": "${Header-Signature}"
-    },
-    {
       "field_name": "Header-v-c-merchant-id",
       "field_value_expression": "$!organizationId"
     },
@@ -78,7 +74,7 @@
       "field_value_expression": "#{if}($IsTest)apitest.cybersource.com#{else}api.cybersource.com#{end}"
     },
     {
-      "field_name": "Header-Signature",
+      "field_name": "Header-signature",
       "field_value_expression": "
       #[[
       ## Construct signature string according to CyberSource requirements
