@@ -75,7 +75,7 @@
     },
     {
       "field_name": "Header-digest",
-      "field_value_expression": "SHA-256=$!ZUtility.getDigest($!requestBody, \"SHA-256\")"
+      "field_value_expression": "$!ZUtility.getDigest($!requestBody, \"SHA-256\")"
     },
     {
       "field_name": "Header-signature",
@@ -305,7 +305,7 @@
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -535,7 +535,7 @@
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -660,7 +660,7 @@
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -772,7 +772,7 @@
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
