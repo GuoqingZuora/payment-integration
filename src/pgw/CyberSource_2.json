@@ -62,7 +62,7 @@
       "field_value_expression": "application/json"
     },
     {
-      "field_name": "Header-Authorization",
+      "field_name": "Header-signature",
       "field_value_expression": "${Header-Signature}"
     },
     {
@@ -292,8 +292,8 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
@@ -518,8 +518,8 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
@@ -639,8 +639,8 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
@@ -747,8 +747,8 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "Authorization",
-              "field_value_expression": "${Header-Authorization}"
+              "field_name": "signature",
+              "field_value_expression": "${Header-signature}"
             },
             {
               "field_name": "v-c-merchant-id",
