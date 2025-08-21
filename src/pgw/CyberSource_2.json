@@ -74,6 +74,10 @@
       "field_value_expression": "#{if}($IsTest)apitest.cybersource.com#{else}api.cybersource.com#{end}"
     },
     {
+      "field_name": "Header-digest",
+      "field_value_expression": "SHA-256=$!ZUtility.getDigest($!requestBody, \"SHA-256\")"
+    },
+    {
       "field_name": "Header-signature",
       "field_value_expression": "
       #[[
@@ -298,6 +302,10 @@
             {
               "field_name": "Host",
               "field_value_expression": "${Header-Host}"
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -526,6 +534,10 @@
               "field_value_expression": "${Header-Host}"
             },
             {
+              "field_name": "digest",
+              "field_value_expression": "${Header-digest}"
+            },
+            {
               "field_name": "v-c-date",
               "field_value_expression": "${Header-v-c-date}"
             },
@@ -647,6 +659,10 @@
               "field_value_expression": "${Header-Host}"
             },
             {
+              "field_name": "digest",
+              "field_value_expression": "${Header-digest}"
+            },
+            {
               "field_name": "v-c-date",
               "field_value_expression": "${Header-v-c-date}"
             },
@@ -753,6 +769,10 @@
             {
               "field_name": "Host",
               "field_value_expression": "${Header-Host}"
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "${Header-digest}"
             },
             {
               "field_name": "v-c-date",
