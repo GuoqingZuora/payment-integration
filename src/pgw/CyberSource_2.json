@@ -300,12 +300,12 @@
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -530,12 +530,12 @@
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -655,12 +655,12 @@
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
@@ -767,12 +767,12 @@
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
             {
-              "field_name": "Host",
+              "field_name": "host",
               "field_value_expression": "${Header-Host}"
             },
             {
               "field_name": "digest",
-              "field_value_expression": "${Header-digest}"
+              "field_value_expression": "SHA-256=${Header-digest}"
             },
             {
               "field_name": "v-c-date",
