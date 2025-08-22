@@ -74,25 +74,6 @@
       "field_value_expression": "#{if}($IsTest)apitest.cybersource.com#{else}api.cybersource.com#{end}"
     },
     {
-      "field_name": "Header-digest",
-      "field_value_expression": "$!ZUtility.getDigest($!requestBody, \"SHA-256\")"
-    },
-    {
-      "field_name": "Header-signature",
-      "field_value_expression": "
-      #[[
-      ## Construct signature string according to CyberSource requirements
-      #{set}($algorithm = 'HmacSHA256')
-      #{set}($headers = 'host v-c-date request-target digest v-c-merchant-id')
-      #{set}($keyId = $!SharedKey)
-      #{set}($signature = $ZUtility.generateHmacSignature($!sharedsecret, $signatureString, $algorithm))
-      
-      ## Build Authorization header value
-      Signature keyId=\"${keyId}\", algorithm=\"${algorithm}\", headers=\"${headers}\", signature=\"${signature}\"
-      ]]#
-      "
-    },
-    {
       "field_name": "Block-Error-Handler",
       "field_value_expression": "
       #[[
@@ -304,16 +285,30 @@
               "field_value_expression": "${Header-Host}"
             },
             {
-              "field_name": "digest",
-              "field_value_expression": "SHA-256=${Header-digest}"
-            },
-            {
               "field_name": "v-c-date",
               "field_value_expression": "${Header-v-c-date}"
             },
             {
               "field_name": "REQUEST_BODY",
               "field_value_expression": "${requestBody}"
+            },
+            {
+              "temporary": true,
+              "field_name": "Header-digest",
+              "field_value_expression": "$!ZUtility.getDigest(${requestBody}, \"SHA-256\")"
+            },
+            {
+              "temporary": true,
+              "field_name": "sigatureString",
+              "field_value_expression": "host: ${host}\nv-c-date: ${v-c-date}\nrequest-target: post /pts/v2/payments\ndigest: SHA-256=${Header-digest}\nv-c-merchant-id: ${v-c-merchant-id}"
+            },
+            {
+              "field_name": "signature",
+              "field_value_expression": "keyid=\"${SharedKey}\", algorithm=\"HmacSHA256\", headers=\"host v-c-date request-target digest v-c-merchant-id\", signature=\"$!ZUtility.getSignature(${sigatureString},\"HmacSHA256\",${sharedsecret})\""
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "SHA-256=${Header-digest}"
             }
           ],
           "request_to_log": "Request = [${requestBody}; URL = $!URL]",
@@ -506,7 +501,7 @@
               #{end}
               #{set}( $validationRequestMap['processingInformation']['capture'] = false )
 
-              #{set}( $requestBody = $ZUtility.mapToJSON($validationRequestMap) )
+              #{set}( $requestBody = $ZUtility.mapToJSONWithPrettyFormat($validationRequestMap) )
               "
             },
             {
@@ -534,16 +529,30 @@
               "field_value_expression": "${Header-Host}"
             },
             {
-              "field_name": "digest",
-              "field_value_expression": "SHA-256=${Header-digest}"
-            },
-            {
               "field_name": "v-c-date",
               "field_value_expression": "${Header-v-c-date}"
             },
             {
               "field_name": "REQUEST_BODY",
               "field_value_expression": "${requestBody}"
+            },
+            {
+              "temporary": true,
+              "field_name": "Header-digest",
+              "field_value_expression": "$!ZUtility.getDigest(${requestBody}, \"SHA-256\")"
+            },
+            {
+              "temporary": true,
+              "field_name": "sigatureString",
+              "field_value_expression": "host: ${host}\nv-c-date: ${v-c-date}\nrequest-target: post /pts/v2/payments\ndigest: SHA-256=${Header-digest}\nv-c-merchant-id: ${v-c-merchant-id}"
+              },
+            {
+              "field_name": "signature",
+              "field_value_expression": "keyid=\"${SharedKey}\", algorithm=\"HmacSHA256\", headers=\"host v-c-date request-target digest v-c-merchant-id\", signature=\"$!ZUtility.getSignature(${sigatureString},\"HmacSHA256\",${sharedsecret})\""
+            },
+            {
+            "field_name": "digest",
+            "field_value_expression": "SHA-256=${Header-digest}"
             }
           ],
           "request_to_log": "Request = [${requestBody}; URL = $!URL]",
@@ -631,7 +640,7 @@
               #{end}
               #{set}( $paymentRequestMap['processingInformation']['capture'] = false )
 
-              #{set}( $requestBody = $ZUtility.mapToJSON($paymentRequestMap) )
+              #{set}( $requestBody = $ZUtility.mapToJSONWithPrettyFormat($paymentRequestMap) )
               "
             },
             {
@@ -647,10 +656,6 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "signature",
-              "field_value_expression": "${Header-signature}"
-            },
-            {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
@@ -659,16 +664,30 @@
               "field_value_expression": "${Header-Host}"
             },
             {
-              "field_name": "digest",
-              "field_value_expression": "SHA-256=${Header-digest}"
-            },
-            {
               "field_name": "v-c-date",
               "field_value_expression": "${Header-v-c-date}"
             },
             {
               "field_name": "REQUEST_BODY",
               "field_value_expression": "${requestBody}"
+            },
+            {
+              "temporary": true,
+              "field_name": "Header-digest",
+              "field_value_expression": "$!ZUtility.getDigest(${requestBody}, \"SHA-256\")"
+            },
+            {
+              "temporary": true,
+              "field_name": "sigatureString",
+              "field_value_expression": "host: ${host}\nv-c-date: ${v-c-date}\nrequest-target: post /pts/v2/payments\ndigest: SHA-256=${Header-digest}\nv-c-merchant-id: ${v-c-merchant-id}"
+            },
+            {
+              "field_name": "signature",
+              "field_value_expression": "keyid=\"${SharedKey}\", algorithm=\"HmacSHA256\", headers=\"host v-c-date request-target digest v-c-merchant-id\", signature=\"$!ZUtility.getSignature(${sigatureString},\"HmacSHA256\",${sharedsecret})\""
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "SHA-256=${Header-digest}"
             }
           ],
           "request_to_log": "Request = [${requestBody}; URL = $!URL]",
@@ -743,7 +762,7 @@
               #{set}( $voidRequestMap['clientReferenceInformation']['reconciliationId'] = $!PaymentNumber )
               #{end}
 
-              #{set}( $requestBody = $ZUtility.mapToJSON($voidRequestMap) )
+              #{set}( $requestBody = $ZUtility.mapToJSONWithPrettyFormat($voidRequestMap) )
               "
             },
             {
@@ -759,10 +778,6 @@
               "field_value_expression": "${Header-Content-Type}"
             },
             {
-              "field_name": "signature",
-              "field_value_expression": "${Header-signature}"
-            },
-            {
               "field_name": "v-c-merchant-id",
               "field_value_expression": "${Header-v-c-merchant-id}"
             },
@@ -771,17 +786,32 @@
               "field_value_expression": "${Header-Host}"
             },
             {
-              "field_name": "digest",
-              "field_value_expression": "SHA-256=${Header-digest}"
-            },
-            {
               "field_name": "v-c-date",
               "field_value_expression": "${Header-v-c-date}"
             },
             {
               "field_name": "REQUEST_BODY",
               "field_value_expression": "${requestBody}"
+            },
+            {
+              "temporary": true,
+              "field_name": "Header-digest",
+              "field_value_expression": "$!ZUtility.getDigest(${requestBody}, \"SHA-256\")"
+            },
+            {
+              "temporary": true,
+              "field_name": "sigatureString",
+              "field_value_expression": "host: ${host}\nv-c-date: ${v-c-date}\nrequest-target: post /pts/v2/payments/${authTransactionId}/voids\ndigest: SHA-256=${Header-digest}\nv-c-merchant-id: ${v-c-merchant-id}"
+            },
+            {
+              "field_name": "signature",
+              "field_value_expression": "keyid=\"${SharedKey}\", algorithm=\"HmacSHA256\", headers=\"host v-c-date request-target digest v-c-merchant-id\", signature=\"$!ZUtility.getSignature(${sigatureString},\"HmacSHA256\",${sharedsecret})\""
+            },
+            {
+              "field_name": "digest",
+              "field_value_expression": "SHA-256=${Header-digest}"
             }
+
           ],
           "request_to_log": "Void Request = [${requestBody}; URL = $!URL]",
           "transaction_response_fields": [
@@ -810,7 +840,7 @@
               #{set}( $voidTransactionId = $voidResponseDoc.valueOf('/JsonRoot/id') )
               #{set}( $voidStatus = $voidResponseDoc.valueOf('/JsonRoot/status') )
 
-              #{if} ($StringUtils.equals($voidStatus, 'VOIDED'))
+              #{if} ($StringUtils.equals($voidStatus, 'REVERSED'))
               #{set}( $zuoraResponseCode = 'Approved' )
               #{else}
               #{set}( $zuoraResponseCode = 'Failed' )
